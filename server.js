@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const AuthController = require("./controllers/authController");
 const BookController = require("./controllers/bookController");
 const AuthorController = require("./controllers/authorController");
 const UserController = require("./controllers/userController");
@@ -40,7 +39,6 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.use(AuthController);
 app.use("/api/books", BookController);
 app.use("/api/authors", AuthorController);
 app.use("/api/user", UserController);
