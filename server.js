@@ -43,9 +43,9 @@ app.use("/api/books", BookController);
 app.use("/api/authors", AuthorController);
 app.use("/api/user", UserController);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 // test
 app.listen(PORT, () => {
   console.log(`App is running on http://localhost:${PORT}`);
